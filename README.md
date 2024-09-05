@@ -1,3 +1,15 @@
+# Demonstration Project
+
+This is a demonstration project using an example project from the Vercel python examples at [https://github.com/vercel/examples](https://github.com/vercel/examples).
+
+What we want to demonstrate is "pair programming" in Cursor between me (@peterdresslar) and an AI chatbot. Our `main` branch will have the base example.
+
+In our branches, we'll use different AI engines to accomplish more or less the same tweak to the codebase--we want to alter the example to actually demonstrate communication between the Next React app and the Flask API. This is a simple example, but does involve a little bit of knowledge about the environments that extends well beyond pure TS/Python code. 
+
+We'll use a nonstandard (as of now!) file called `chats.txt` in the root to capture some chat messages.
+
+---
+
 <p align="center">
   <a href="https://nextjs-flask-starter.vercel.app/">
     <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
