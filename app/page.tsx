@@ -1,7 +1,27 @@
-import Image from 'next/image'
-import Link from 'next/link'
+'use client';
+
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
+  const [data, setData] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('/api/python')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then((data) => setData(data))
+      .catch((error) => {
+        console.error('There was a problem with the fetch operation:', error);
+        setData('Error fetching data');
+      });
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -111,6 +131,11 @@ export default function Home() {
           </p>
         </a>
       </div>
+
+      <div>
+        <h1>Data from Backend:</h1>
+        <div dangerouslySetInnerHTML={{ __html: data || '' }} />
+      </div>
     </main>
-  )
+  );
 }
