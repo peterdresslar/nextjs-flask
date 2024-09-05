@@ -1,0 +1,13 @@
+Hi, claude, everything seems to be up and running smoothly, but I would like to alter my front end to demonstrate communication with my backend. I do not want to make many changes (none to the api, if possible.) What can you suggest?
+
+---
+
+great job, though i note that the message from the api is already wrapped in tags.
+
+---
+
+nailed it, thanks! I guess we need a space between the "Message from API:" label and the span, if we are being particular.
+
+---
+
+didn't work! Maybe (I hate to say it) an `&nbsp;`??
