@@ -1,0 +1,19 @@
+Hi, cursor-small, everything seems to be up and running smoothly, but I would like to alter my front end to demonstrate communication with my backend. I do not want to make many changes (none to the api, if possible.) What can you suggest?
+
+---
+
+not bad, but remember that we are working in a multi-tier react environment and using state....
+
+---
+
+what i meant was, we need to be addressing the fact that this is a client component.... 
+
+---
+
+That works fine, although I will pont out that the message itself is wrapped in tags...
+
+---
+
+not quite! we should actually undo that change. If you look at the codebase, i mean to say that the api is sending us an html message wrapped in tags already. We don't need to display them on the page.
+
+---
