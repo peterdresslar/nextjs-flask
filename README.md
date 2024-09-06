@@ -8,6 +8,19 @@ In our branches, we'll use different AI engines to accomplish more or less the s
 
 We'll use a nonstandard (as of now!) file called `chats.txt` in the root to capture some chat messages.
 
+## Branches
+
+This project has multiple branches, each demonstrating different features or modifications:
+
+- [main](../../tree/main): The base example of the Next.js and Flask integration.
+- [claude-branch](../../tree/claude-branch): Implements communication between Next.js and Flask using Claude AI assistance.
+- [gpt4-branch](../../tree/gpt4-branch): Implements communication between Next.js and Flask using GPT-4 AI assistance.
+- [cursor-branch](../../tree/cursor-branch): Implements communication between Next.js and Flask using Cursor AI (A modified GPT-4o mini?)assistance.
+
+### Chats.txt Differences
+
+Each branch contains a `chats.txt` file that captures chat messages. The contents of these files differ based on the specific AI engine used and the interactions that took place during the implementation. Be sure to check the `chats.txt` file in each branch to see the unique messages and problem-solving approaches used by different AI assistants.
+
 ---
 
 <p align="center">
