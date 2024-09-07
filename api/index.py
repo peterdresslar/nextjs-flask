@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
-from .models import db, migrate, Migration
-from .commands import init_app as init_commands
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from datetime import datetime
 import os
 from dotenv import load_dotenv
@@ -11,9 +11,13 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("POSTGRES_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-db.init_app(app)
-migrate.init_app(app, db)
-init_commands(app)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+class Migration(db.Model):
+    __tablename__ = "migrations"
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
 @app.route("/api/python")
 def hello_world():

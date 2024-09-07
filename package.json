@@ -9,9 +9,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db-init": "flask --app api/index db init",
-    "migrate": "flask --app api/index db migrate",
-    "upgrade": "flask --app api/index db upgrade"
+    "init-db": "flask --app api/index db init",
+    "migrate-db": "flask --app api/index db migrate",
+    "upgrade-db": "flask --app api/index db upgrade",
+    "seed-db": "python -m api.seed"
   },
   "dependencies": {
     "@types/node": "20.1.4",
