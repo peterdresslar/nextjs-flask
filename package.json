@@ -8,7 +8,9 @@
     "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "flask --app api/index db migrate",
+    "upgrade": "flask --app api/index db upgrade"
   },
   "dependencies": {
     "@types/node": "20.1.4",
