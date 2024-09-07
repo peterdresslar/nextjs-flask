@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "db-init": "flask --app api/index db init",
     "migrate": "flask --app api/index db migrate",
     "upgrade": "flask --app api/index db upgrade"
   },
@@ -17,7 +18,7 @@
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
-    "concurrently": "^8.0.1",
+    "concurrently": "^8.2.2",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "next": "14.2.8",
