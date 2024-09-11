@@ -16,6 +16,7 @@ This project has multiple branches, each demonstrating different features or mod
 - [claude-branch](../../tree/claude-branch): Implements communication between Next.js and Flask using Claude AI assistance.
 - [gpt4-branch](../../tree/gpt4-branch): Implements communication between Next.js and Flask using GPT-4 AI assistance.
 - [cursor-branch](../../tree/cursor-branch): Implements communication between Next.js and Flask using Cursor AI (A modified GPT-4o mini?)assistance.
+- [deploy-me-pg](../../tree/deploy-me-pg): With an example postgres (Neon) database integration. Requires a `.env` file with a `POSTGRES_URL` environment variable. `.env.example` is provided as an example.
 
 ### Chats.txt Differences
 
